@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+fqSou 监控
+{% end %}
+
+{% block css %}
+
+{% end %}
+
+{% block body %}
+<div id="panel" class="panel panel-info">
+    <div class="panel-heading">ip监控</div>
+    <div class="panel-body">
+        <p>
+            {% raw log %}
+        </p>
+    </div>
+</div>
+
+{% end %}
+
+{% block js %}
+
+{% end %}
+
+
+

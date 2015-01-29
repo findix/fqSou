@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+登陆 fqSou 管理系统
+{% end %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ static_url('css/bootstrap-login.css') }}"/>
+{% end %}
+
+{% block body %}
+<div data-toggle="login"
+     data-title="fqSou"
+     data-action="/login"></div>
+{% end %}
+
+{% block js %}
+<script src="{{ static_url('js/bootstrap-login.js') }}"></script>
+{% end %}
+
+
+

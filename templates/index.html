@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}
+fqSou 管理系统
+{% end %}
+
+{% block body %}
+<div class="jumbotron">
+            <h1>嗖的一下……</h1>
+
+        <h2>发生了什么？</h2>
+
+        <p>
+            <strong>fqSou，帮助你在复杂的环境下高速上网。</strong>
+        </p>
+</div>
+
+<div id="panel" class="panel panel-info">
+    <div class="panel-body">
+        <h2>服务原则</h2>
+
+        <p>
+            现在的话，此类服务很多哦，我之前也是一直用Go某gent，和我名字前两个字母相同的路由器，网上到处爬的虚拟专用网，公司里时灵时不灵的宝岛虚拟专用网等等 <br/>
+            但是呢，这一个个最近都渐渐停止了服务
+        </p>
+
+        <p>
+            Go某gent的GAE版本停止开发，路由器停止服务，网上越来越难找到，公司的还是时灵时不灵而且只能访问Google <br/>
+            我想，未来的网络加速服务，肯定会往个人化以及付费服务发展，虽然让所有人都去弄台VPS敲一堆linux命令不现实啦
+        </p>
+
+        <p>
+            而免费，也是最贵 <br/>
+            提供免费服务，几乎是一定会被滥用，最终无以为继 <br/>
+            不是不愿意花钱，只是要不然麻烦，要不然觉得不值 <br/>
+            我无力解决这一问题，但是，也许能部分解决
+        </p>
+
+        <p>
+            圈子与捐助 <br/>
+            即<br/>
+            我只给我认识的人提供服务<br/>
+            服务没有固定资费，完全依靠您的捐助<br/>
+        </p>
+
+        <h2>用户协约</h2>
+
+        <ul class="list-group">
+            <li class="list-group-item"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> 您确保仅限于个人非商业目的使用;</li>
+            <li class="list-group-item"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> 您不会用于自动化工具，包括、但不限于网络爬虫、发送垃圾邮件、网络攻击和流量劫持；
+            </li>
+            <li class="list-group-item"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> 您不会执行任何可能危害服务安全的操作。
+            </li>
+            <li class="list-group-item"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> 不保证服务100%稳定，但是因为自己也在用，所以至少作为资深强迫型人格障碍的我用着很开心
+            </li>
+            <li class="list-group-item"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> 我相信使用服务的你应该与我相熟，所以我不会限制流量以及多台设备登陆，但是我希望您可以保护好自己的账号以及密码
+            </li>
+            <li class="list-group-item"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> 我的意思是说，我给您的账号，希望您独自使用，这是独一无二的，对吗？
+            </li>
+        </ul>
+
+        <h2>服务类型</h2>
+
+        <p>第一期全部为Shadowsocks，现在是日本的线路，后面可能考虑开通其他方式以及其他线路，但是我选择Shadowsocks当然是有理由的: )</p>
+
+        <h2>资费与获取方式</h2>
+
+        <p>
+            您知道我不可能靠这项服务养活自己，所以与其跟大家谈钱不如让大家根据服务自己决定。开源界的捐助，我一直觉得是一项非常好的方式。所以资费与获取方式与是这样的：<br/>
+            <strong>您想用，跟我说，我立刻给您一个账号，您先用，然后随意根据这项服务对自己的帮助向我捐助，帮助这项服务长期地进行下去。</strong>
+        </p>
+
+        <h2>联系方式</h2>
+
+        <p>唉？难道你不认识我么，那快先想办法认识吧n(*≧▽≦*)n </p>
+
+        <h2>
+            捐助渠道
+        </h2>
+        <img class="img-rounded" src="{{ static_url('image/alipay.jpg') }}">
+        <p>支付宝：303570150@qq.com</p>
+    </div>
+</div>
+{% end %}

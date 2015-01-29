@@ -1,0 +1,60 @@
+html, body, #wrap {
+    height: 100%
+}
+
+body {
+    background-color: #87CEFA;
+    font-family: "Microsoft YaHei", "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 20px
+}
+
+body > #wrap {
+    height: auto;
+    min-height: 100%
+}
+
+nav {
+    opacity: 1
+}
+
+#main {
+    padding-bottom: 90px
+}
+
+#content {
+    margin-top: 50px;
+}
+
+#footer {
+    position: relative;
+    margin-top: -90px;
+    height: 90px;
+    min-width: 400px;
+    clear: both
+}
+
+.footer {
+    color: #999;
+    /*opacity: 0.8;*/
+    text-align: center;
+    padding: 23px;
+    /*border-top: 2px solid #E7E7E7;*/
+    /*border-top-left-radius: 1em;*/
+    /*border-top-right-radius: 1em;*/
+    background-color: #F7F7F7;
+}
+
+.footer p {
+    position: relative
+}
+
+@-moz-document url-prefix() {
+    fieldset {
+        display: table-cell
+    }
+}
+
