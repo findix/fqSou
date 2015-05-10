@@ -9,6 +9,7 @@ Python Tornado项目
 1. 安装tornado，supervisor
 1. 安装supervisor
 1. 创建Shadowsocks配置文件shadowsocks.json //`_comment`是注释给自己看的
+
 		{
 		    "server": "fqsou.com",
 		    "port_password": {
@@ -23,6 +24,7 @@ Python Tornado项目
 		    "method": "aes-256-cfb",
 		    "fast_open": false
 		}
+
 1. 修改supervisor配置文件
 最后加入以下内容
 
