@@ -9,6 +9,7 @@ import tornado.options
 import tornado.web
 
 import Config
+import Log
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -81,8 +82,9 @@ class SaveHandler(BaseHandler):
 class LogHandler(BaseHandler):
     @tornado.web.authenticated
     def get(self):
-        log = open(r"/var/log/port-ip-monitor.log", "r").read()
-        self.render("log.html", log=log.replace("\n", "<br/>"))
+        logs = Log.get_logs(r"/var/log/port-ip-monitor.log")
+        logs.reverse()
+        self.render("log.html", logs=logs)
 
 
 if __name__ == "__main__":
