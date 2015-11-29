@@ -8,14 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- stylesheet -->
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ static_url('css/main.css') }}" rel="stylesheet">
     {% block css %}{% end %}
 
 
     <!-- icon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="{{ static_url('favicon.ico') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ static_url('favicon.ico') }}" type="image/x-icon"/>
 </head>
 <body>
 
@@ -56,11 +56,10 @@
                         <li><a href="/logout">退出</a></li>
                         {% end %}
                     </ul>
-
                 </div>
 
                 {% if current_user %}
-                <div id="changePasswdModal" class="modal fade" role="dialog" aria-labelledby="changePasswdModal"
+                <div id="changePasswdModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="changePasswdModal"
                      aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -112,7 +111,7 @@
 
 <!-- javascript -->
 <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 {% block js %}{% end %}
 </body>
 </html>

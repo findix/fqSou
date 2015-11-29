@@ -12,6 +12,13 @@ fqSou 监控
 <div id="panel" class="panel panel-info">
     <div class="panel-heading">ip监控</div>
     <div class="panel-body">
+        <div class="input-group" style="width: 200px">
+            <span class="input-group-addon">显示行数</span>
+            <input class="form-control" type="number" id="count" aria-describedby="Count" value={{ count }}>
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="button">Go!</button>
+            </span>
+        </div>
         <table class="table" data-toggle="table"
                data-query-params="queryParams"
                data-pagination="true"
@@ -24,7 +31,13 @@ fqSou 监控
             {% for log in logs %}
             <tr>
                 <td>{{ log.datetime }}</td>
-                <td>{% raw log.content.replace("\n","<br>") %}</td>
+                <td>
+                    {% for ip in log.content %}
+                    <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top"
+                            title="{{ ip.address }}">{{ ip.port }}
+                    </button>
+                    {% end %}
+                </td>
             </tr>
             {% end %}
             </tbody>
@@ -34,7 +47,26 @@ fqSou 监控
 {% end %}
 
 {% block js %}
-<script src="http://cdn.bootcss.com/bootstrap-table/1.7.0/bootstrap-table.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap-table/1.9.1/bootstrap-table.min.js"></script>
+<script>
+    $(function () {
+        var click = function () {
+            window.location.replace(['/log/', 1, '/', $('#count').val()].join(''))
+        };
+        $("#button").click(function (event) {
+            click();
+        });
+        $("#count").keypress(function (event) {
+            if (event.keyCode == 13) {
+                click();
+            }
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+        $(".table").on('page-change.bs.table', function (e, number, size) {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    });
+</script>
 {% end %}
 
 
