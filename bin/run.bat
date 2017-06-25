@@ -1,0 +1,1 @@
+@python ..\fqSou.py
